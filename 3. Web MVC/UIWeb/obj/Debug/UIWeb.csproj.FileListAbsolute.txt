@@ -38,3 +38,9 @@ C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submi
 C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submit\3. Web MVC\UIWeb\obj\Debug\UIWeb.csprojResolveAssemblyReference.cache
 C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submit\3. Web MVC\UIWeb\obj\Debug\UIWeb.dll
 C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submit\3. Web MVC\UIWeb\obj\Debug\UIWeb.pdb
+C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submit\3. Web MVC\UIWeb\bin\App_Data\DataBase.mdf
+C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submit\3. Web MVC\UIWeb\bin\App_Data\DataBase_log.ldf
+C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submit\3. Web MVC\UIWeb\bin\Parser.dll
+C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submit\3. Web MVC\UIWeb\bin\UIConsole.exe
+C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submit\3. Web MVC\UIWeb\bin\Parser.pdb
+C:\Users\USER\Documents\Visual Studio 2015\Projects\Github_Repository\Work_Submit\3. Web MVC\UIWeb\bin\UIConsole.pdb
