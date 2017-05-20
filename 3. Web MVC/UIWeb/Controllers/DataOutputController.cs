@@ -15,7 +15,7 @@ namespace UIWeb.Controllers
             List<Data_Repository> Receive = new List<Data_Repository>();
             DataHandler XML = new DataHandler();
             DBInteractive DB = new DBInteractive();
-
+            
             Receive = XML.Parser(@"http://opendata.epa.gov.tw/ws/Data/UV/?format=xml");
 
             DB.DataBase_Clear();
