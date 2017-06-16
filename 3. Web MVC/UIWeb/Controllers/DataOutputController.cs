@@ -25,19 +25,6 @@ namespace UIWeb.Controllers
                 DB.DataBase_Write(temp);
             }
 
-            //string message = string.Format(@"已解析{0}筆資料<br/>", Receive.Count);
-            //message += string.Format(@"站點名稱 / 所在縣市 / 資料發布單位 / 資料發布日期<br/>");
-            //message += string.Format(@"紫外線數值 / 站點緯度(Lat) / 站點經度(Lon)<br/>");
-            //message += string.Format(@"==================================================<br/>");
-
-            //Receive.ForEach(temp =>
-            //{
-            //    message += string.Format("{0,-5}/ {1,-5}/ {2,-7}/ {3}<br/>", temp._Parser_SiteName, temp._Parser_County, temp._Parser_PublishAgency, temp._Parser_PublishTime);
-            //    message += string.Format("{0,-12}/ {1}\t/ {2}<br/><br/>", temp._Parser_UVI, temp._Parser_WGS84Lat, temp._Parser_WGS84Lon);
-            //});
-
-            //return Content(message);
-
             ViewBag.Title = "顯示UV監控站資料";
 
             return View(Receive);
@@ -63,5 +50,20 @@ namespace UIWeb.Controllers
             return View(Receive);
         }
 
+        [HttpGet]
+        public ActionResult DataDisplay(string id)
+        {
+            List<Data_Repository> Display = new List<Data_Repository>();
+            DBInteractive DB = new DBInteractive();
+
+            if (string.IsNullOrEmpty(id))
+                Display = new List<Data_Repository>();
+            else
+                Display = DB.FindByID(id);
+
+            ViewBag.Title = id + "站詳細資料";
+
+            return View(Display);
+        }
     }
 }

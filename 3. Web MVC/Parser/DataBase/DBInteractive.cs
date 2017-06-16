@@ -64,5 +64,37 @@ namespace Parser.DataBase
             command.ExecuteNonQuery();
             connection.Close();
         }
+
+        public List<Data_Repository> FindByID(string ID)
+        {
+            List<Data_Repository> temp = new List<Data_Repository>();
+            
+            SqlConnection connection = new SqlConnection(_connect_str);
+            connection.Open();
+
+            SqlCommand command = new SqlCommand("", connection);
+            command.CommandText = string.Format(@"Select * from Data where SiteName = N'{0}'", ID);
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Data_Repository stream = new Data_Repository();
+
+                stream._Parser_SiteName = reader["SiteName"].ToString();
+                stream._Parser_UVI = reader["UVI"].ToString();
+                stream._Parser_PublishAgency = reader["PublishAgency"].ToString();
+                stream._Parser_County = reader["County"].ToString();
+                stream._Parser_WGS84Lon = reader["WGS84Lon"].ToString();
+                stream._Parser_WGS84Lat = reader["WGS84Lat"].ToString();
+                stream._Parser_PublishTime = reader["PublishTime"].ToString();
+
+                temp.Add(stream);
+            }
+
+            connection.Close();
+
+            return temp;
+        }
     }
 }

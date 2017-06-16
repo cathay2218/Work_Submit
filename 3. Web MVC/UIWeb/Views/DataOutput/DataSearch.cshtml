@@ -25,13 +25,13 @@
 
 @*資料顯示*@
 <div class="list-group">
-    <a href="#" class="list-group-item active">
+    <a class="list-group-item active">
         紫外線監控站點  —  共有 @Model.Count 筆搜尋結果
     </a>
 
     @for (int i = 0; i < receive.Count; i++)
     {
-        <a class="list-group-item">
+        <a class="list-group-item"  href="/DataOutput/DataDisplay?id=@receive[i]._Parser_SiteName">
             <h4 class="list-group-item-heading">站點名稱：@receive[i]._Parser_SiteName</h4>
             <p class="list-group-item-text">站點位置：@receive[i]._Parser_County</p>
         </a>
